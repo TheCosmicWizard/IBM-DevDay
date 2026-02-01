@@ -24,13 +24,13 @@
             <h1>Intent-to-Workflow <span class="highlight">Compiler</span></h1>
             <p class="subtitle">Compiling human intent into executable enterprise workflows using AI agents</p>
             <p class="description">
-                Modern automation tools require predefined steps, while large language models only generate unstructured
-                task lists.
-                This project introduces an Intent-to-Workflow Compiler, a novel AI system that transforms high-level
-                human intent
-                into structured, executable workflow graphs (DAG). Using semantic AI agents, the system extracts goals,
-                constraints,
-                and dependencies, then compiles them into ordered enterprise-ready workflows.
+            Modern automation tools require predefined steps, while large language models only generate unstructured
+            task lists.
+            This project introduces an Intent-to-Workflow Compiler, a novel AI system that transforms high-level
+            human intent
+            into structured, executable workflow graphs (DAG). Using semantic AI agents, the system extracts goals,
+            constraints,
+            and dependencies, then compiles them into ordered enterprise-ready workflows.
             </p>
             <button class="cta-button" onclick="window.location.href='chatbot.html'">
                 Try the Chatbot
@@ -53,7 +53,6 @@
                 <!-- Step 1 -->
                 <div class="step left" data-step="1">
                     <div class="node"></div>
-                    <div class="connector"></div>
                     <div class="card">
                         <span class="step-num">STEP 01</span>
                         <h3>User Interface</h3>
@@ -65,19 +64,20 @@
                             <span class="tag">capture</span>
                         </div>
                     </div>
-                    <div class="flow-label">Natural Language Intent</div>
+                    
                     <div class="flow-connection"></div>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="step right" data-step="2">
                     <div class="node"></div>
-                    <div class="connector"></div>
                     <div class="card">
                         <span class="step-num">STEP 02</span>
                         <h3>Intent Parsing Agent</h3>
-                        <p class="subtitle">Extracts structured goals, scope boundaries, and hard constraints from the
-                            raw intent using an LLM.</p>
+                        <p class="subtitle">
+                        Converts raw natural language business requests into structured enterprise intent JSON including goals, scope,
+                        constraints, stakeholders, and operational context using LLM-driven semantic understanding.
+                        </p>
                         <div class="tags">
                             <span class="tag">LLM</span>
                             <span class="tag">goals</span>
@@ -85,63 +85,28 @@
                             <span class="tag">constraints</span>
                         </div>
                     </div>
-                    <div class="flow-label">Structured Intent</div>
+                    
                     <div class="flow-connection"></div>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="step left" data-step="3">
                     <div class="node"></div>
-                    <div class="connector"></div>
                     <div class="card">
                         <span class="step-num">STEP 03</span>
                         <h3>Workflow Synthesis Agent</h3>
-                        <p class="subtitle">Decomposes the structured intent into a concrete, ordered list of actionable
-                            tasks and sub-steps.</p>
+                        <p class="subtitle">
+                        Transforms structured intent into enterprise-ready workflow task plans using AI-driven task synthesis,
+                        enterprise lifecycle modeling, and structured workflow generation logic.
+                        </p>
                         <div class="tags">
                             <span class="tag">decomposition</span>
                             <span class="tag">tasks</span>
                             <span class="tag">sub-steps</span>
                         </div>
                     </div>
-                    <div class="flow-label">Task List</div>
+                    
                     <div class="flow-connection"></div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="step right" data-step="4">
-                    <div class="node"></div>
-                    <div class="connector"></div>
-                    <div class="card">
-                        <span class="step-num">STEP 04</span>
-                        <h3>Dependency Resolver</h3>
-                        <p class="subtitle">Analyzes task interdependencies and constructs a directed acyclic graph that
-                            defines execution order.</p>
-                        <div class="tags">
-                            <span class="tag">DAG</span>
-                            <span class="tag">ordering</span>
-                            <span class="tag">dependencies</span>
-                        </div>
-                    </div>
-                    <div class="flow-label">Workflow Graph (DAG)</div>
-                    <div class="flow-connection"></div>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="step left" data-step="5">
-                    <div class="node"></div>
-                    <div class="connector"></div>
-                    <div class="card">
-                        <span class="step-num">STEP 05</span>
-                        <h3>Execution Orchestrator</h3>
-                        <p class="subtitle">Orchestrates task execution along the DAG, monitors progress, and exports
-                            the completed workflow.</p>
-                        <div class="tags">
-                            <span class="tag">orchestration</span>
-                            <span class="tag">export</span>
-                            <span class="tag">monitor</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
