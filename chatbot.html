@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IWC Chatbot - Intent to Workflow Compiler</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/chatbot.css">
+
+</head>
+
+<body>
+    <!-- Ambient background -->
+    <div class="bg-layer"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">IWC</div>
+                <div class="logo-text">Intent-to-Workflow Compiler</div>
+            </div>
+            <a href="index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Chat Container -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1 class="chat-title">AI Workflow Assistant</h1>
+            <p class="chat-subtitle">Describe your business intent and I'll help you create an executable workflow</p>
+        </div>
+
+        <div class="chat-window">
+            <div class="messages-area" id="messagesArea">
+                <div class="welcome-message">
+                    <h3>Welcome to the IWC Chatbot!</h3>
+                    <p>I can help you transform your business intentions into structured, executable workflows. Try one
+                        of these examples or describe your own scenario:</p>
+
+                    <div class="example-prompts">
+                        <div class="example-prompt" onclick="sendExampleMessage(this)">
+                            "Launch a new product in the European market with full compliance"
+                        </div>
+                        <div class="example-prompt" onclick="sendExampleMessage(this)">
+                            "Set up a customer onboarding process for our SaaS platform"
+                        </div>
+                        <div class="example-prompt" onclick="sendExampleMessage(this)">
+                            "Create a data migration workflow from legacy systems"
+                        </div>
+                        <div class="example-prompt" onclick="sendExampleMessage(this)">
+                            "Implement a security audit process for our infrastructure"
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="message-avatar">
+                    <div class="logo-icon" style="width: 36px; height: 36px; font-size: 14px;">AI</div>
+                </div>
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-container">
+                    <textarea class="message-input" id="messageInput"
+                        placeholder="Describe your business intent or workflow needs..." rows="1"></textarea>
+                    <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                        ➤
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/chatbot.js"></script>
+</body>
+
+</html>
